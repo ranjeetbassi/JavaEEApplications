@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<address-book>
+<stmt>This is a <bold>bold </bold>undertaking</stmt>
+	<contact id="1" type="1">
+		<name>Barack Obama</name>
+		<email>barack@middleClassChampion.org</email>
+	</contact>
+	<contact id="2" type="2">
+		<name>Mitt Romney</name>
+		<email>mitt@upperClassChampion.org</email>
+	</contact>
+</address-book>
