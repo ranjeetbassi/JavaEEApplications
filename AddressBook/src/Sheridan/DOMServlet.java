@@ -2,8 +2,6 @@ package Sheridan;
 
 import java.io.IOException;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,16 +29,20 @@ public class DOMServlet extends HttpServlet {
 	 */
 	public DOMServlet() {
 		super();
-		String relativePath = "./WEB-INF/data/address-book.xml";
+
+	}
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		String relativePath = "./WEB-INF/address-book.xml";
 		fullFilePath = getServletContext().getRealPath(relativePath);
 	}
 
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -97,12 +99,6 @@ public class DOMServlet extends HttpServlet {
 		} catch (TransformerException e) {
 			e.printStackTrace();
 		}
-	}
-
-	@Override
-	public void init() throws ServletException {
-		// TODO Auto-generated method stub
-		super.init();
 	}
 
 }
