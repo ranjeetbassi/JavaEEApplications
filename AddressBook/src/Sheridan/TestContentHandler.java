@@ -5,6 +5,11 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 
+/*
+ * Name: Ranjeet Bassi
+ * Assignment 3
+ * Due Date: November 17,2012
+ */
 public class TestContentHandler implements ContentHandler {
 
 	@Override

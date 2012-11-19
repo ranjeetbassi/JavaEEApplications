@@ -14,6 +14,11 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import org.xml.sax.SAXException;
 
+/*
+ * Name: Ranjeet Bassi
+ * Assignment 3
+ * Due Date: November 17,2012
+ */
 /**
  * Servlet implementation class DOMServlet
  */
@@ -78,14 +83,14 @@ public class DOMServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		try {
-			// read the HTTP parameters from the user
-			String name = request.getParameter("txtName");
-			String newEmail = request.getParameter("txtNewEmail");
-			String newPhone = request.getParameter("txtNewPhone");
-			String newAddress = request.getParameter("txtNewAddress");
+		try {// read the HTTP parameters from the user
+
+			String name = request.getParameter("txtName").trim();
+			String newEmail = request.getParameter("txtNewEmail").trim();
+			String newPhone = request.getParameter("txtNewPhone").trim();
+			String newAddress = request.getParameter("txtNewAddress").trim();
 			// get the address book from the bulletin board
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(true);
 			AddressBook addressBook = (AddressBook) session
 					.getAttribute(ADDRESS_BOOK_PIN);
 			// tell the address book model object to change the email of the

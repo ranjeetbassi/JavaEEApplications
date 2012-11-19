@@ -14,6 +14,11 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.SAXException;
 
+/*
+ * Name: Ranjeet Bassi
+ * Assignment 3
+ * Due Date: November 17,2012
+ */
 /**
  * Servlet implementation class SAXServlet
  */

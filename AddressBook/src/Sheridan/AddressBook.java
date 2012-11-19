@@ -23,6 +23,11 @@ import org.w3c.dom.Text;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+/*
+ * Name: Ranjeet Bassi
+ * Assignment 3
+ * Due Date: November 17,2012
+ */
 public class AddressBook {
 
 	public ArrayList<Contact> contactList;
@@ -109,7 +114,18 @@ public class AddressBook {
 				Element emailElement = (Element) nodes.item(3);
 				NodeList emailList = emailElement.getChildNodes();
 				Text emailText = (Text) emailList.item(0);
-				emailText.setData(newEmail);
+				if (!newEmail.isEmpty())
+					emailText.setData(newEmail);
+				Element phoneElement = (Element) nodes.item(5);
+				NodeList phoneList = phoneElement.getChildNodes();
+				Text phoneText = (Text) phoneList.item(0);
+				if (!newPhone.isEmpty())
+					phoneText.setData(newPhone);
+				Element addressElement = (Element) nodes.item(7);
+				NodeList addressList = addressElement.getChildNodes();
+				Text addressText = (Text) addressList.item(0);
+				if (!newAddress.isEmpty())
+					addressText.setData(newAddress);
 				break;
 			}
 		}
@@ -134,4 +150,5 @@ public class AddressBook {
 		transformer.transform(domSource, xmlStream);
 
 	}
+
 }

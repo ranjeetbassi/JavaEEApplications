@@ -7,7 +7,9 @@
 <title>Assignment 3</title>
 </head>
 <body>
-
+<!-- Name: Ranjeet Bassi
+Assignment # 3
+November 17, 2012 -->
 <%
 PrintWriter out1= response.getWriter();
 AddressBook addressBook = (AddressBook) session.getAttribute("addressbook");
@@ -37,5 +39,7 @@ if(addressBook!=null){
 %>
 </table>
 <a href=./change-contact.xhtml>Change Contact</a>
+<a href=./change-contact.xhtml>Add Contact</a>
+<a href=./change-contact.xhtml>Delete Contact</a>
 </body>
 </html>

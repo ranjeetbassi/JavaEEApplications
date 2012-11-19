@@ -8,6 +8,11 @@ import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/*
+ * Name: Ranjeet Bassi
+ * Assignment 3
+ * Due Date: November 17,2012
+ */
 public class MySAXContentHandler extends DefaultHandler {
 
 	private Locator loc;

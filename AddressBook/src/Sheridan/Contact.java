@@ -1,5 +1,10 @@
 package Sheridan;
 
+/*
+ * Name: Ranjeet Bassi
+ * Assignment 3
+ * Due Date: November 17,2012
+ */
 public class Contact {
 
 	private String name;
