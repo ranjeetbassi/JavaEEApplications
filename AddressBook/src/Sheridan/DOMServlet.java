@@ -82,13 +82,16 @@ public class DOMServlet extends HttpServlet {
 			// read the HTTP parameters from the user
 			String name = request.getParameter("txtName");
 			String newEmail = request.getParameter("txtNewEmail");
+			String newPhone = request.getParameter("txtNewPhone");
+			String newAddress = request.getParameter("txtNewAddress");
 			// get the address book from the bulletin board
 			HttpSession session = request.getSession();
 			AddressBook addressBook = (AddressBook) session
 					.getAttribute(ADDRESS_BOOK_PIN);
 			// tell the address book model object to change the email of the
 			// given contact
-			addressBook.changeContactEmail(name, newEmail);
+			addressBook
+					.changeContactEmail(name, newEmail, newPhone, newAddress);
 			addressBook.save(fullFilePath);
 			session.setAttribute(ADDRESS_BOOK_PIN, addressBook);
 			// tell the view to display the model

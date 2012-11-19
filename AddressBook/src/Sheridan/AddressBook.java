@@ -25,7 +25,7 @@ import org.xml.sax.SAXException;
 
 public class AddressBook {
 
-	private ArrayList<Contact> contactList;
+	public ArrayList<Contact> contactList;
 	private Document domAddressBookDocument;
 
 	public AddressBook() {
@@ -72,14 +72,26 @@ public class AddressBook {
 					"email").item(0);
 			String email = emailElem.getTextContent();
 
+			// phone
+			Element phoneElem = (Element) contactElem.getElementsByTagName(
+					"phone").item(0);
+			String phone = phoneElem.getTextContent();
+
+			// address
+			Element addressElem = (Element) contactElem.getElementsByTagName(
+					"address").item(0);
+			String address = addressElem.getTextContent();
 			Contact contact = new Contact();
 			contact.setName(name);
 			contact.setEmail(email);
+			contact.setPhone(phone);
+			contact.setAddress(address);
 			contactList.add(contact);
 		}
 	}
 
-	public void changeContactEmail(String name, String newEmail) {
+	public void changeContactEmail(String name, String newEmail,
+			String newPhone, String newAddress) {
 		// locate the contact element that needs to be changed
 		NodeList contactNodeList = domAddressBookDocument
 				.getElementsByTagName("contact");
